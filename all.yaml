@@ -152,13 +152,16 @@ spec:
   selector:
     app: network
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
       targetPort: 80
-    - protocol: TCP
+    - name: app
+      protocol: TCP
       port: 3000
       targetPort: 3000
-    - protocol: TCP
+    - name: prometheus
+      protocol: TCP
       port: 9090
       targetPort: 9090
 
