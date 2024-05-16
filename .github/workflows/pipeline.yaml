@@ -1,0 +1,51 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up kubectl
+        uses: docker://lachlanevenson/k8s-kubectl:v1.21.0
+        with:
+          args:
+            - kubectl apply -f deployments/app.yaml
+            - kubectl apply -f deployments/postgres.yaml
+            - kubectl apply -f deployments/suporte.yaml
+            - kubectl apply -f network/network.yaml
+            - kubectl apply -f services/load-balancer.yaml
+
+  observability:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up kubectl
+        uses: docker://lachlanevenson/k8s-kubectl:v1.21.0
+        with:
+          args:
+            - kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
+            - kubectl apply -f kubernetes-dashboard.yaml
