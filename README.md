@@ -39,12 +39,16 @@
 <p>Se precisar deletar algum pod, utilize o comando:</p>
 <pre>kubectl delete pod <nome-do-pod></pre>
 <p>Para acessar os serviços, você pode usar as seguintes URLs no seu navegador local:</p>
-<ul>
-    <li><strong>Aplicação:</strong> http://localhost:80</li>
-    <li><strong>Prometheus:</strong> http://localhost:9090</li>
-    <li><strong>Grafana:</strong> http://localhost:3000</li>
-    <li><strong>Postgres:</strong> http://localhost:5432</li>
-</ul>
+
+<pre>
+Aplicação: http://localhost:80
+Prometheus: http://localhost:9090
+Grafana: http://localhost:3000
+Postgres: http://localhost:5432
+</pre>
+
+<p>Para acessar o banco de dados Postgres, você precisará de um cliente de banco de dados, como o DBeaver. Você pode fazer o download do DBeaver a partir do site oficial. Após a instalação, você pode se conectar ao Postgres usando a URL acima e as credenciais fornecidas na configuração do seu banco de dados.</p>
+
 <p>Note que o Prometheus e o Grafana são usados para monitoramento e visualização, respectivamente. Eles estão configurados para coletar métricas da sua aplicação e do banco de dados Postgres.</p>
 <p>Este projeto é uma estrutura básica para uma aplicação Kubernetes. Ele não inclui a configuração específica do Grafana e do Prometheus. Você precisará adicionar suas próprias configurações de painel e alerta no Grafana, e suas próprias configurações de coleta de métricas no Prometheus, de acordo com as necessidades da sua aplicação.</p>
 <p>Além disso, você pode escalar a aplicação para mais instâncias usando o comando:</p>
