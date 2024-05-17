@@ -27,15 +27,15 @@
 <ul>
 <ul>
     <li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/kubernetes_icon_144086.png" alt="Kubernetes" style="width:50px;height:50px;"> Kubernetes</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/windows_icon_130754.png" alt="Windows" style="width:50px;height:50px;"> Windows</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/docker_logo_icon_168974.png" alt="Docker" style="width:50px;height:50px;"> Docker</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png" alt="VSCode" style="width:50px;height:50px;"> VSCode</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" alt="Postgres" style="width:50px;height:50px;"> Postgres</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2421/PNG/512/github_original_logo_icon_146506.png" alt="GitHub" style="width:50px;height:50px;"> GitHub</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_git_icon_130581.png" alt="Git" style="width:50px;height:50px;"> Git</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_yaml_icon_130664.png" alt="YAML" style="width:50px;height:50px;"> YAML</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/prometheus_icon_144044.png" alt="Prometheus" style="width:50px;height:50px;"> Prometheus</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/grafana_logo_icon_144095.png" alt="Grafana" style="width:50px;height:50px;"> Grafana</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/windows_icon_130754.png" alt="Windows" style="width:50px;height:50px;"> Windows</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/docker_logo_icon_168974.png" alt="Docker" style="width:50px;height:50px;"> Docker</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png" alt="VSCode" style="width:50px;height:50px;"> VSCode</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" alt="Postgres"> Postgres</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2421/PNG/512/github_original_logo_icon_146506.png" alt="GitHub"> GitHub</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_git_icon_130581.png" alt="Git"> Git</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_yaml_icon_130664.png" alt="YAML"> YAML</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/prometheus_icon_144044.png" alt="Prometheus"> Prometheus</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/grafana_logo_icon_144095.png" alt="Grafana"> Grafana</li>
 </ul>
 
 <h2>Implementações</h2>
