@@ -25,17 +25,17 @@
 <h2>Tecnologias Utilizadas</h2>
 <p>Este projeto utiliza várias tecnologias e ferramentas para fornecer uma solução robusta e eficiente. Aqui estão as principais tecnologias utilizadas:</p>
 <ul>
-<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_kubernetes_icon_130563.png" alt="Kubernetes"> Kubernetes</li>
-<li><img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/windows10_104376.png" alt="Windows"> Windows</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_docker_icon_130643.png" alt="Docker"> Docker</li>
-<li><img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/vscode_93829.png" alt="VSCode"> VSCode</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" alt="Postgres"> Postgres</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2148/PNG/512/github_logo_icon_132333.png" alt="GitHub"> GitHub</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/git_original_wordmark_logo_icon_146510.png" alt="Git"> Git</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/yaml_plain_wordmark_logo_icon_146392.png" alt="YAML"> YAML</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/prometheus_logo_icon_144147.png" alt="Prometheus"> Prometheus</li>
-<li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/grafana_logo_icon_144095.png" alt="Grafana"> Grafana</li>
-
+<ul>
+    <li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_kubernetes_icon_130563.png" alt="Kubernetes" style="width:20px;height:20px;"> Kubernetes</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/windows10_104376.png" alt="Windows" style="width:20px;height:20px;"> Windows</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_docker_icon_130643.png" alt="Docker" style="width:20px;height:20px;"> Docker</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/vscode_93829.png" alt="VSCode" style="width:20px;height:20px;"> VSCode</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" alt="Postgres" style="width:20px;height:20px;"> Postgres</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2148/PNG/512/github_logo_icon_132333.png" alt="GitHub" style="width:20px;height:20px;"> GitHub</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/git_original_wordmark_logo_icon_146510.png" alt="Git" style="width:20px;height:20px;"> Git</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/yaml_plain_wordmark_logo_icon_146392.png" alt="YAML" style="width:20px;height:20px;"> YAML</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/prometheus_logo_icon_144147.png" alt="Prometheus" style="width:20px;height:20px;"> Prometheus</li>
+    <li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/grafana_logo_icon_144095.png" alt="Grafana" style="width:20px;height:20px;"> Grafana</li>
 </ul>
 
 <h2>Implementações</h2>
