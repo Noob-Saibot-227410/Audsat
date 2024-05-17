@@ -25,14 +25,14 @@
 <h2>Tecnologias Utilizadas</h2>
 <p>Este projeto utiliza várias tecnologias e ferramentas para fornecer uma solução robusta e eficiente. Aqui estão as principais tecnologias utilizadas:</p>
 <ul>
-<li><img src="https://icons8.com/icons/set/kubernetes" alt="Kubernetes"> Kubernetes</li>
-<li><img src="https://icons8.com.br/icons/windows" alt="Windows"> Windows</li>
-<li><img src="https://icons8.com/icons/set/docker" alt="Docker"> Docker</li>
-<li><img src="https://icons8.com/icons/set/visual-studio-code" alt="VSCode"> VSCode</li>
+<li><img src="https://github.com/kubernetes/community/blob/master/icons/README.md" alt="Kubernetes"> Kubernetes</li>
+<li><img src="https://icon-icons.com/pt/icones/busca/windows" alt="Windows"> Windows</li>
+<li><img src="https://www.docker.com/company/newsroom/media-resources/" alt="Docker"> Docker</li>
+<li><img src="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons" alt="VSCode"> VSCode</li>
 <li><img src="https://icons8.com/icons/set/postgresql" alt="Postgres"> Postgres</li>
-<li><img src="https://icons8.com/icons/set/github" alt="GitHub"> GitHub</li>
-<li><img src="https://icons8.com/icons/set/git" alt="Git"> Git</li>
-<li><img src="https://icons8.com/icons/set/yaml" alt="YAML"> YAML</li>
+<li><img src="https://github.com/logos" alt="GitHub"> GitHub</li>
+<li><img src="https://git-scm.com/downloads/logos" alt="Git"> Git</li>
+<li><img src="https://www.flaticon.com/free-icons/yaml" alt="YAML"> YAML</li>
 <li><img src="https://icons8.com/icons/set/prometheus" alt="Prometheus"> Prometheus</li>
 <li><img src="https://icons8.com/icons/set/grafana" alt="Grafana"> Grafana</li>
 </ul>
