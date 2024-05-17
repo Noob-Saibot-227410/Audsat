@@ -25,16 +25,17 @@
 <h2>Tecnologias Utilizadas</h2>
 <p>Este projeto utiliza várias tecnologias e ferramentas para fornecer uma solução robusta e eficiente. Aqui estão as principais tecnologias utilizadas:</p>
 <ul>
-<li><img src="https://github.com/kubernetes/community/blob/master/icons/README.md" alt="Kubernetes"> Kubernetes</li>
-<li><img src="https://icon-icons.com/pt/icones/busca/windows" alt="Windows"> Windows</li>
-<li><img src="https://www.docker.com/company/newsroom/media-resources/" alt="Docker"> Docker</li>
-<li><img src="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons" alt="VSCode"> VSCode</li>
-<li><img src="https://icons8.com/icons/set/postgresql" alt="Postgres"> Postgres</li>
-<li><img src="https://github.com/logos" alt="GitHub"> GitHub</li>
-<li><img src="https://git-scm.com/downloads/logos" alt="Git"> Git</li>
-<li><img src="https://www.flaticon.com/free-icons/yaml" alt="YAML"> YAML</li>
-<li><img src="https://icons8.com/icons/set/prometheus" alt="Prometheus"> Prometheus</li>
-<li><img src="https://icons8.com/icons/set/grafana" alt="Grafana"> Grafana</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_kubernetes_icon_130563.png" alt="Kubernetes"> Kubernetes</li>
+<li><img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/windows10_104376.png" alt="Windows"> Windows</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_docker_icon_130643.png" alt="Docker"> Docker</li>
+<li><img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/vscode_93829.png" alt="VSCode"> VSCode</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" alt="Postgres"> Postgres</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2148/PNG/512/github_logo_icon_132333.png" alt="GitHub"> GitHub</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/git_original_wordmark_logo_icon_146510.png" alt="Git"> Git</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/yaml_plain_wordmark_logo_icon_146392.png" alt="YAML"> YAML</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/prometheus_logo_icon_144147.png" alt="Prometheus"> Prometheus</li>
+<li><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/grafana_logo_icon_144095.png" alt="Grafana"> Grafana</li>
+
 </ul>
 
 <h2>Implementações</h2>
