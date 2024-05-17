@@ -22,6 +22,21 @@
         |__ prometheus-config.yaml
     </pre>
 
+<h2>Tecnologias Utilizadas</h2>
+<p>Este projeto utiliza várias tecnologias e ferramentas para fornecer uma solução robusta e eficiente. Aqui estão as principais tecnologias utilizadas:</p>
+<ul>
+<li><img src="https://icons8.com/icons/set/kubernetes" alt="Kubernetes"> Kubernetes</li>
+<li><img src="https://icons8.com.br/icons/windows" alt="Windows"> Windows</li>
+<li><img src="https://icons8.com/icons/set/docker" alt="Docker"> Docker</li>
+<li><img src="https://icons8.com/icons/set/visual-studio-code" alt="VSCode"> VSCode</li>
+<li><img src="https://icons8.com/icons/set/postgresql" alt="Postgres"> Postgres</li>
+<li><img src="https://icons8.com/icons/set/github" alt="GitHub"> GitHub</li>
+<li><img src="https://icons8.com/icons/set/git" alt="Git"> Git</li>
+<li><img src="https://icons8.com/icons/set/yaml" alt="YAML"> YAML</li>
+<li><img src="https://icons8.com/icons/set/prometheus" alt="Prometheus"> Prometheus</li>
+<li><img src="https://icons8.com/icons/set/grafana" alt="Grafana"> Grafana</li>
+</ul>
+
 <h2>Implementações</h2>
     <ul>
         <li><strong>app.yaml:</strong> Implementação do aplicativo.</li>
@@ -39,13 +54,17 @@
 <p>Se precisar deletar algum pod, utilize o comando:</p>
 <pre>kubectl delete pod <nome-do-pod></pre>
 <p>Para acessar os serviços, você pode usar as seguintes URLs no seu navegador local:</p>
-
-<pre>
-Aplicação: http://localhost:80
-Prometheus: http://localhost:9090
-Grafana: http://localhost:3000
-Postgres: http://localhost:5432
-</pre>
+<br>
+<p>No seu browser assim que tudo estiver rodando:</p>
+<br>
+<p>Aplicação principal</p>
+<pre>http://localhost</pre>
+<p>Prometheus</p>
+<pre>http://localhost:9090</pre>
+<p>Grafana</p>
+<pre>http://localhost:3000</pre>
+<p>Postgres, lembrando que precisa do dbeaver</p>
+<pre>Postgres: http://localhost:5432</pre>
 
 <p>Para acessar o banco de dados Postgres, você precisará de um cliente de banco de dados, como o DBeaver. Você pode fazer o download do DBeaver a partir do site oficial. Após a instalação, você pode se conectar ao Postgres usando a URL acima e as credenciais fornecidas na configuração do seu banco de dados.</p>
 
