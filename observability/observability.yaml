@@ -1,5 +1,3 @@
-observability:
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,7 +11,6 @@ spec:
       targetPort: 9090
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -25,3 +22,16 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: observability-service
+spec:
+  selector:
+    app: observability
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

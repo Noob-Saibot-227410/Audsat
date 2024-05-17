@@ -1,7 +1,8 @@
+# Serviço para o aplicativo app
 apiVersion: v1
 kind: Service
 metadata:
-  name: load-balancer-service
+  name: app-load-balancer-service
 spec:
   selector:
     app: app
@@ -9,4 +10,32 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+  type: LoadBalancer
+
+# Serviço para o Grafana
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana-load-balancer-service
+spec:
+  selector:
+    app: grafana
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: LoadBalancer
+
+  # Serviço para o Prometheus
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-load-balancer-service
+spec:
+  selector:
+    app: prometheus
+  ports:
+    - protocol: TCP
+      port: 9090
+      targetPort: 9090
   type: LoadBalancer
