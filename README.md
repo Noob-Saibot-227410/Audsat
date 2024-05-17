@@ -2,7 +2,7 @@
 <html>
 <body>
     <h1>Projeto Audsat</h1>
-    <p>Este é o projeto Audsat, que inclui várias implementações de Kubernetes. Este projeto foi projetado para ser executado em um ambiente Windows com o Kubernetes ativado através do Docker Desktop.</p>
+    <p>Este é o projeto Audsat, que inclui várias implementações de Kubernetes. O projeto foi projetado para ser executado em um ambiente Windows com o Kubernetes ativado através do Docker Desktop.</p>
 
 <h2>Estrutura do Projeto</h2>
     <hr>
@@ -32,13 +32,18 @@
     </ul>
 
 <h2>Como usar</h2>
-    <p>Para usar este projeto, você precisa ter o Kubernetes instalado e configurado em sua máquina. Em seguida, você pode aplicar as configurações usando o comando `kubectl apply -f all.yaml`.</p>
-    <p>Este comando irá subir todos os serviços definidos no arquivo `all.yaml`. Você pode verificar o status dos pods usando o comando `kubectl get pods`. Se você precisar deletar algum pod, você pode usar o comando `kubectl delete pod <nome-do-pod>`.</p>
+    <p>Para usar este projeto, você precisa ter o Kubernetes instalado e configurado em sua máquina. Em seguida, você pode aplicar as configurações usando o comando:</p>
+    <pre>kubectl apply -f all.yaml</pre>
+    <p>Esse comando subirá todos os serviços definidos no arquivo `all.yaml`. Você pode verificar o status dos pods usando:</p>
+    <pre>kubectl get pods</pre>
+    <p>Se precisar deletar algum pod, utilize o comando:</p>
+    <pre>kubectl delete pod <nome-do-pod></pre>
 
 <h2>Padrões de Design</h2>
     <p>Este projeto segue vários padrões de design de software para garantir um código limpo e manutenível. Por exemplo, ele usa o padrão de design MVC (Model-View-Controller) para separar a lógica de negócios da interface do usuário.</p>
 
 <h2>Ambiente</h2>
     <p>Este projeto foi projetado para ser executado em um ambiente Windows com o Kubernetes ativado através do Docker Desktop. Isso permite que você execute o projeto localmente para desenvolvimento e teste.</p>
+
 </body>
 </html>
