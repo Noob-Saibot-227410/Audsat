@@ -1,51 +1,51 @@
-name: CI/CD Pipeline
+name: Deploy to Amazon EKS
 
 on:
   push:
     branches:
-      - main
+      - main  # Set your branch name here
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up kubectl
-        uses: docker://lachlanevenson/k8s-kubectl:v1.21.0
-        with:
-          args:
-            - kubectl apply -f deployments/app.yaml
-            - kubectl apply -f deployments/postgres.yaml
-            - kubectl apply -f deployments/suporte.yaml
-            - kubectl apply -f network/network.yaml
-            - kubectl apply -f services/load-balancer.yaml
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-  observability:
-    needs: deploy
-    runs-on: ubuntu-latest
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
 
-    steps:
-      - name: Set up kubectl
-        uses: docker://lachlanevenson/k8s-kubectl:v1.21.0
-        with:
-          args:
-            - kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
-            - kubectl apply -f kubernetes-dashboard.yaml
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2  # Set your AWS region here
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build and push Docker images
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: audsat-ecr-repo  # Set your ECR repository name here
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+    - name: Set up Kubeconfig
+      uses: aws-actions/amazon-eks-set-kubeconfig@v1
+      with:
+        cluster-name: audsat-cluster  # Set your EKS cluster name here
+
+    - name: Deploy to EKS
+      run: kubectl apply -f all.yaml
