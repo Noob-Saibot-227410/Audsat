@@ -26,11 +26,13 @@
 <p>Este projeto utiliza várias tecnologias e ferramentas para fornecer uma solução robusta e eficiente. Aqui estão as principais tecnologias utilizadas:</p>
 <ul>
 <ul>
+    <li>Pipeline Github Actions</li>
     <li>Kubernetes</li>
     <li>Windows</li>
     <li>Docker</li>
     <li>VSCode</li>
     <li>Postgres</li>
+    <li>Terraform</li>
     <li>GitHub</li>
     <li>Git</li>
     <li>YAML</li>
@@ -48,7 +50,7 @@
         <li><strong>observability.yaml:</strong> Configurações de observabilidade, incluindo Prometheus para monitoramento e Grafana para visualização.</li>
     </ul>
 
-<h2>Como usar</h2>
+<h2>Como usar local</h2>
 <p>Para usar este projeto, você precisa ter o Kubernetes instalado e configurado em sua máquina. Em seguida, você pode aplicar as configurações usando o comando:</p>
 <pre>kubectl apply -f all.yaml</pre>
 <p>Esse comando subirá todos os serviços definidos no arquivo `all.yaml`. Você pode verificar o status dos pods usando:</p>
@@ -78,6 +80,34 @@
 <p>Para verificar o status do balanceador de carga, você pode usar o comando:</p>
 <pre>kubectl get svc load-balancer-service</pre>
 <p>Este comando mostrará o status do serviço do balanceador de carga, incluindo o endereço IP externo.</p>
+
+<h2>Pipeline</h2>
+<p>Este projeto utiliza uma pipeline de CI/CD para automatizar o processo de implantação no Amazon EKS. A pipeline é configurada para ser acionada em cada push na branch principal. Aqui estão as etapas da pipeline:</p>
+
+<ul>
+    <li><strong>Checkout code:</strong> Esta etapa faz o checkout do código do repositório.</li>
+    <li><strong>Setup Terraform:</strong> Esta etapa configura o Terraform para a implantação.</li>
+    <li><strong>Configure AWS credentials:</strong> Esta etapa configura as credenciais da AWS para a implantação no EKS.</li>
+    <li><strong>Terraform Init e Apply:</strong> Estas etapas inicializam o Terraform e aplicam a configuração do Terraform.</li>
+    <li><strong>Login to Amazon ECR:</strong> Esta etapa faz login no Amazon ECR para o push da imagem Docker.</li>
+    <li><strong>Build and push Docker images:</strong> Esta etapa constrói a imagem Docker e faz o push para o repositório ECR.</li>
+    <li><strong>Set up Kubeconfig:</strong> Esta etapa configura o Kubeconfig para a implantação no EKS.</li>
+    <li><strong>Deploy to EKS:</strong> Esta etapa aplica a configuração no EKS para a implantação.</li>
+</ul>
+
+<p>Para mais detalhes sobre a configuração da pipeline, consulte o arquivo de configuração da pipeline no repositório.</p>
+
+<h2>Terraform</h2>
+<p>Este projeto utiliza o Terraform para provisionar e gerenciar recursos na AWS. O Terraform é usado para criar um cluster EKS na AWS, incluindo a configuração de grupos de nós para o cluster. Aqui estão os principais componentes do código Terraform:</p>
+
+<ul>
+    <li><strong>Provider:</strong> Configura o provedor AWS e a região.</li>
+    <li><strong>Data:</strong> Obtém a AMI mais recente para os nós do EKS.</li>
+    <li><strong>Module:</strong> Usa o módulo EKS do Terraform para criar o cluster EKS.</li>
+    <li><strong>Variables:</strong> Define várias variáveis usadas no código, incluindo a região da AWS, o nome do cluster, o ID da VPC e as subnets.</li>
+</ul>
+
+<p>Para mais detalhes sobre a configuração do Terraform, consulte o arquivo de configuração do Terraform no repositório.</p>
 
 <h2>Padrões de Design</h2>
     <p>Este projeto segue vários padrões de design de software para garantir um código limpo e manutenível. Por exemplo, ele usa o padrão de design MVC (Model-View-Controller) para separar a lógica de negócios da interface do usuário.</p>
