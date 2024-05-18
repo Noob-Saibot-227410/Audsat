@@ -5,7 +5,7 @@
     <p>Este é o projeto Audsat, que inclui várias implementações de Kubernetes. O projeto foi projetado para ser executado em um ambiente Windows com o Kubernetes ativado através do Docker Desktop.</p>
 
 <pre>
-Usuários
+                                  Usuários
                                      |
                            +-------------------+
                            |   Amazon Route 53  |
