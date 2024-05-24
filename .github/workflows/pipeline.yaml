@@ -1,51 +1,53 @@
-name: Deploy to Amazon EKS
+# DEPOIS DESCOMENTAR, COMENTEI SENAO FICA RODANDO A PIPE SEM PARAR NO ACTIONS
 
-on:
-  push:
-    branches:
-      - main  # Set your branch name here
+# name: Deploy to Amazon EKS
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# on:
+#   push:
+#     branches:
+#       - main  # Set your branch name here
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
 
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-2  # Set your AWS region here
+#     - name: Setup Terraform
+#       uses: hashicorp/setup-terraform@v1
 
-    - name: Terraform Init
-      run: terraform init
+#     - name: Configure AWS credentials
+#       uses: aws-actions/configure-aws-credentials@v1
+#       with:
+#         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         aws-region: us-west-2  # Set your AWS region here
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
+#     - name: Terraform Init
+#       run: terraform init
 
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
+#     - name: Terraform Apply
+#       run: terraform apply -auto-approve
 
-    - name: Build and push Docker images
-      env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: audsat-ecr-repo  # Set your ECR repository name here
-        IMAGE_TAG: ${{ github.sha }}
-      run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+#     - name: Login to Amazon ECR
+#       id: login-ecr
+#       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Set up Kubeconfig
-      uses: aws-actions/amazon-eks-set-kubeconfig@v1
-      with:
-        cluster-name: audsat-cluster  # Set your EKS cluster name here
+#     - name: Build and push Docker images
+#       env:
+#         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+#         ECR_REPOSITORY: audsat-ecr-repo  # Set your ECR repository name here
+#         IMAGE_TAG: ${{ github.sha }}
+#       run: |
+#         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+#         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-    - name: Deploy to EKS
-      run: kubectl apply -f all.yaml
+#     - name: Set up Kubeconfig
+#       uses: aws-actions/amazon-eks-set-kubeconfig@v1
+#       with:
+#         cluster-name: audsat-cluster  # Set your EKS cluster name here
+
+#     - name: Deploy to EKS
+#       run: kubectl apply -f all.yaml
